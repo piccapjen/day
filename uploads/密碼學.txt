@@ -1,0 +1,29 @@
+對稱式  1.AES(128BIT key 利用雜湊H MD5套件)
+	2.3DES
+
+
+RSA(非對稱
+公=>公開
+私=>1.解開
+    2.簽署(數位簽章)
+
+
+RSA   混和加密
+		A							B
+1.產生文字檔TXT
+2.RADOM一個亂數，丟竟MD5產生128BIT的值 當對稱式KEY |		     (m', KA')
+3.						   |		
+M'=AES (m)					   |			    DB 
+     KA						   |		1.KA = (KA')  mod N
+						   |		2.m = AES (M')
+	  EB					   |			KA
+KA' = (KA)  mod N				   |		=>B產生一個文字檔(mb)
+m',KA'						   |				
+						   |		3.H_mb  =H(mb)
+						   |				DB
+						   |		4.H_mb' = (H_mb)  mod N
+	H_mb = H(mb) 				   |		5.mb,H_mb'
+		     EB				   |
+	H_mb =(H_mb')	mod  N					     |					  
+	   |			 				     |	
+           -------------<-----------<-----------<-----------<---------	

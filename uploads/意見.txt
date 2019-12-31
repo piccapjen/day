@@ -1,0 +1,119 @@
+審查意見
+1.宜在開頭說明應用及其必要性
+2.本研究在國軍的應用為何？
+3.計畫書中密碼法的架構，請加強對比，方便閱讀。
+4.研究架構請繪製研究架構圖，使閱讀者一目瞭然。
+5.題目適切，方法可行。
+6.和研究主題之關聯宜有更嚴謹研究。
+7.未列公式號
+8.請在檢查和更正格式及用詞
+
+
+
+審查意見回覆
+
+1.感謝委員的意見。
+2.依委員的意見於P.1本文第一段說明中。
+3.已依委員意見於計畫書中加入公式號。
+
+SET IDENTITY_INSERT Thesis_Plan ON;
+ 
+INSERT INTO Thesis_Plan ([Chinese_Topic], [Student_ID]) VALUES (1223, 1090620214);
+
+
+
+           vertical-align: top;
+insert into Thesis_Plan (Chinese_Topic,Student_ID,Teacher_Passing_Exam)values(@Chinese_Topic,@ID,'尚未審查')
+insert into Teacher_Thesis_Plan (Teacher_ID,Plan_Number)values(@New_TID,@@IDENTITY)
+
+
+select top 1 Teacher.Teacher_ID from Teacher
+where  Teacher.Teacher_ID not in 
+((select Teacher_ID from  Teacher_Thesis_Plan ,Thesis_Plan where 
+ Teacher_Thesis_Plan.Plan_Number=Thesis_Plan.Plan_Number AND Thesis_Plan.Student_ID='1090620214' ),
+( select Teacher_ID from Teacher_Student,Thesis_Plan where Teacher_Student.Student_ID=Thesis_Plan.Student_ID and Thesis_Plan.Student_ID='1090620214'))order by NewID()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select top 1 Teacher.Teacher_ID from Teacher where  Teacher.Teacher_ID not in  
+((select Teacher_ID from  Teacher_Thesis_Plan ,Thesis_Plan 
+where Teacher_Thesis_Plan.Plan_Number=Thesis_Plan.Plan_Number AND Thesis_Plan.Student_ID='1090620214' ),
+( select Teacher_ID from Teacher_Student,Thesis_Plan 
+where Teacher_Student.Student_ID=Thesis_Plan.Student_ID and Thesis_Plan.Student_ID='1090620214'))order by NewID()
+
+
+insert into Thesis_Plan (Chinese_Topic,Student_ID,Teacher_Passing_Exam)values('test',1090620215,'尚未審查')
+insert into Teacher_Thesis_Plan (Teacher_ID,Plan_Number)values('test',@@IDENTITY)
+
+insert into Thesis_Plan (Chinese_Topic,Student_ID,Teacher_Passing_Exam)values(@Chinese_Topic,@ID,'尚未審查')
+insert into Teacher_Thesis_Plan (Teacher_ID,Plan_Number)values(@New_TID,@@IDENTITY)
+
+
+
+
+
+
+
+
+select COUNT (Teacher_Thesis_Plan.Teacher_ID) from Teacher_Thesis_Plan HAVING  COUNT (Teacher_ID) =2
+SELECT COUNT (Teacher_Thesis_Plan.Teacher_ID) FROM Teacher_Thesis_Plan WHERE Teacher_ID='ndmcb03009 '   
+
+
+count有兩筆的老師達13位則++
+
+
+SELECT (Teacher_Thesis_Plan.Teacher_ID)
+FROM Teacher_Thesis_Plan
+GROUP BY Teacher_ID
+HAVING (COUNT(*) =2)
+
+select count (Teacher_ID) from Teacher_Thesis_Plan where Teacher_ID in (SELECT (Teacher_Thesis_Plan.Teacher_ID)
+FROM Teacher_Thesis_Plan
+GROUP BY Teacher_ID
+HAVING (COUNT(*) =2))
+
+
+
+
+
+
+
+
+
+SELECT (Teacher_Thesis_Plan.Teacher_ID)
+FROM Teacher_Thesis_Plan
+GROUP BY Teacher_ID
+HAVING (COUNT(*) =1)
+###############
+
+SELECT COUNT (Teacher_Thesis_Plan.Teacher_ID) FROM Teacher_Thesis_Plan WHERE Teacher_ID='ndmcb03009 '   
+select count(*) as numtotal from countnum where num = 1
+
+
+select top 1 Teacher.Teacher_ID from Teacher where  Teacher.Teacher_ID not in (select Teacher_ID from Teacher_Student where  Student_ID='1090620215')order by NewID()
+
+select top 1 Teacher.Teacher_ID from Teacher
+where  Teacher.Teacher_ID not in 
+((select Teacher_ID from  Teacher_Thesis_Plan ,Thesis_Plan where 
+ Teacher_Thesis_Plan.Plan_Number=Thesis_Plan.Plan_Number AND Thesis_Plan.Student_ID='1090620215' ),
+( select Teacher_ID from Teacher_Student,Thesis_Plan where Teacher_Student.Student_ID=Thesis_Plan.Student_ID and Thesis_Plan.Student_ID='1090620215'))order by NewID()
+
+select top 1 Teacher_ID from Teacher order by NewID()
+
+SELECT COUNT (Teacher_Thesis_Plan.Teacher_ID)as count FROM Teacher_Thesis_Plan WHERE Teacher_ID='ndmce99012        '
+
+insert into Teacher_Thesis_Plan (Teacher_ID,Plan_Number)values('ndmcb03001','2')
+
+select count(*) as numtotal from countnum where num =2
