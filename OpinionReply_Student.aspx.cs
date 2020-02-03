@@ -21,7 +21,7 @@ public partial class Opinion : System.Web.UI.Page
 
 
          
-        SqlConnection Conn = new SqlConnection("Data Source=LAPTOP-IILRO0JD\\SQLEXPRESS;Initial Catalog=Thesis plan review system;Integrated Security=True");
+        SqlConnection Conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\SCHOOL\\專案\\day\\App_Data\\Thesis plan review system.mdf;Integrated Security=True");
         SqlDataReader dr = null;
         SqlCommand cmd = new SqlCommand("Select * from Thesis_Plan Where [Student_ID] =" + Session["ID"], Conn);
 

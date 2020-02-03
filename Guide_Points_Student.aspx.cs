@@ -57,7 +57,7 @@ public partial class Default2 : System.Web.UI.Page
     protected void Send(object sender, System.EventArgs e)
     {
         string ID = Session["ID"].ToString();
-        SqlConnection cn = new SqlConnection { ConnectionString = ConfigurationManager.ConnectionStrings["Thesis plan review system"].ConnectionString };
+        SqlConnection cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\SCHOOL\\專案\\day\\App_Data\\Thesis plan review system.mdf;Integrated Security=True");
         cn.Open(); //開啟資料庫的連結
         string search_ID_1 = FAP_Name.Text;
         string search_ID_2 = SAP_Name.Text;

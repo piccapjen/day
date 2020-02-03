@@ -20,7 +20,7 @@ public partial class HomePage1 : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        SqlConnection Conn = new SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="D:\SCHOOL\專案\day\App_Data\thesisdatabase.mdf";Integrated Security=True");
+        SqlConnection Conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\USER\\Desktop\\day\\App_Data\\Thesis plan review system.mdf;Integrated Security=True");
         Conn.Open();
 
         SqlDataReader dr = null;

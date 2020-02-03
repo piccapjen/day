@@ -16,7 +16,7 @@ public partial class PersonalInformation : System.Web.UI.Page
             Response.Redirect("Login.aspx");
         }
 
-        SqlConnection Conn = new SqlConnection("Data Source=LAPTOP-IILRO0JD\\SQLEXPRESS;Initial Catalog=Thesis plan review system;Integrated Security=True");
+        SqlConnection Conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\SCHOOL\\專案\\day\\App_Data\\Thesis plan review system.mdf;Integrated Security=True");
         Conn.Open();
         SqlDataReader dr = null, ar = null;
         SqlCommand cmd = new SqlCommand("select * from Teacher_Student where Student_ID = " + Session["ID"], Conn);

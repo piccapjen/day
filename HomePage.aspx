@@ -44,7 +44,9 @@
 							<li role="presentation"><a href="PersonalInformation.aspx">個人資料</a></li>
 							<li role="presentation"><a href="Regulation.aspx">審查規定</a></li>
 							<li role="presentation"><a href="Guide_Points_Student.aspx">選擇指導老師</a></li>
-							<li role="presentation"><a href="OpinionReply_Student.aspx">論文審查</a></li>				
+							<li role="presentation"><a href="OpinionReply_Student.aspx">論文審查</a></li>
+                            <li role="presentation"><a href="OpinionReply_Student.aspx">論文加分</a></li>
+                            <li role="presentation"><a href="OpinionReply_Student.aspx">論文口試</a></li>				
 						</ul>
 					</div>
 				</div>		
